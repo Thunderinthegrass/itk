@@ -1,34 +1,34 @@
 import cl from './Navbar.module.scss';
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return (
     <nav className={cl.nav}>
       <ul className={cl.navList}>
         <li className="navItem post">
-          <Link to="/profile" className={`${cl.navLink} ${cl.active}`}>
+          <NavLink to="/profile" className={navData => navData.isActive ? cl.activeLink : cl.a}>
             Profile
-          </Link>
+          </NavLink>
         </li>
         <li className={cl.navItem}>
-          <Link to="/Dialogs" className={cl.navLink}>
+          <NavLink to="/Dialogs" className={navData => navData.isActive ? cl.activeLink : cl.a}>
             Messages
-          </Link>
+          </NavLink>
         </li>
         <li className={cl.navItem}>
-          <Link to="/News" className={cl.navLink}>
+          <NavLink to="/News" className={navData => navData.isActive ? cl.activeLink : cl.a}>
             News
-          </Link>
+          </NavLink>
         </li>
         <li className={cl.navItem}>
-          <Link to="/Music" className={cl.navLink}>
+          <NavLink to="/Music" className={navData => navData.isActive ? cl.activeLink : cl.a}>
             Music
-          </Link>
+          </NavLink>
         </li>
         <li className={cl.navItem}>
-          <Link to="/Settings" className={cl.navLink}>
+          <NavLink to="/Settings" className={navData => navData.isActive ? cl.activeLink : cl.a}>
             Settings
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </nav>

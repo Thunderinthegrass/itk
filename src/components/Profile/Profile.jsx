@@ -1,12 +1,12 @@
 import cl from "./Profile.module.scss";
 import MyPosts from "./MyPosts/MyPosts";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 const Profile = () => {
   return (
     <div className={cl.content}>
-      <div className={cl.banner}></div>
-      <div className="contentPerson"></div>
-      <MyPosts addBtn="Добавить пост" removeBtn="Удалить пост" title="Мой профиль"/>
+      <ProfileInfo />
+      <MyPosts addBtn="Добавить пост" removeBtn="Удалить пост" title="Мои посты"/>
     </div>
   );
 };

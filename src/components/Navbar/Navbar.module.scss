@@ -1,21 +1,15 @@
 .nav{
   background: #7dc3ec;
   grid-area: n;
-  &List{
-    list-style: none;
-  }
-  &Link{
+  a{
     text-decoration: none;
     color: #ffffff;
     transition: .3s;
-    &:hover{
-      color: #d5e2f1;
-    }
   }
-}
-.active{
-  color: #f13737;
-  &:hover{
+  &List{
+    list-style: none;
+  }
+  .activeLink{
     color: #f13737;
   }
 }
