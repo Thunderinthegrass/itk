@@ -1,27 +1,14 @@
 import cl from './Dialogs.module.scss';
 import DialogItem from './Dialog/DialogItem';
-import Message from './Messages/Messages';
+import Message from './Messages/Message';
 
 
 
 const Dialogs = (props) => {
-  let dialogs = [
-    {id: 1, name: "Владимир Петров"},
-    {id: 2, name: "Федор Пнев"},
-    {id: 3, name: "Охотник Селиван"},
-    {id: 4, name: "Дед Вовка"},
-  ]
 
-  let dialogsElements = dialogs.map(dialog => <DialogItem name={dialog.name} id={dialog.id}/>);
+  let dialogsElements = props.state.dialogs.map(dialog => <DialogItem name={dialog.name} id={dialog.id}/>);
 
-  let messages = [
-    {id: 1, message: "Картошка"},
-    {id: 2, message: "Лук"},
-    {id: 3, message: "Петрушка"},
-    {id: 4, message: "Сало"},
-  ]
-
-  let messagesElements = messages.map(message => <Message message={message.message} id={message.id}/>);
+  let messagesElements = props.state.messages.map(message => <Message message={message.message} id={message.id}/>);
 
   return (
     <div className={cl.dialogs__wrapper}>
