@@ -10,12 +10,11 @@ import Settings from './components/Settings/Settings';
 
 
 const App = (props) => {
-
   return (
     <BrowserRouter>
       <div className="container">
         <Header />
-        <Navbar />
+        <Navbar state={props.state.navbar}/>
         <Routes>
           <Route path ="profile/" element={<Profile state={props.state.profilePage}/>} />
           <Route path ="dialogs/*" element={<Dialogs state={props.state.dialogsPage} />} />

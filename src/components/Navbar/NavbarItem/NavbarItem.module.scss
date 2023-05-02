@@ -1,0 +1,12 @@
+a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.navItem {
+  padding: 3px 0;
+  .activeLink {
+    color: #f13737;
+  }
+}

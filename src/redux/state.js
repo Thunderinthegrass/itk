@@ -1,4 +1,13 @@
 let state = {
+  navbar: {
+    navbarItems: [
+      {id: 1, name: "Profile",path: "profile/"},
+      {id: 2, name: "Dialogs",path: "dialogs/"},
+      {id: 3, name: "News",path: "news/"},
+      {id: 4, name: "Music",path: "music/"},
+      {id: 5, name: "Settings",path: "settings/"},
+    ]
+  },
   profilePage: {
     posts: [
       { id: 1, post: "Первый пост", likes: 30 },

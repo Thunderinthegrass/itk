@@ -10,6 +10,8 @@ const Dialogs = (props) => {
 
   let messagesElements = props.state.messages.map(message => <Message message={message.message} id={message.id}/>);
 
+  
+
   return (
     <div className={cl.dialogs__wrapper}>
       <div className={cl.dialogs}>

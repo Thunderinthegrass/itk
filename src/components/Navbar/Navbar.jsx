@@ -1,11 +1,14 @@
 import cl from './Navbar.module.scss';
-import { NavLink } from 'react-router-dom'
+import NavbarItem from './NavbarItem/NavbarItem';
 
-const Navbar = () => {
+
+const Navbar = (props) => {
+  let navbarItems = props.state.navbarItems.map(item => <NavbarItem name={item.name} path={item.path}/>);
+  console.log()
   return (
     <nav className={cl.nav}>
       <ul className={cl.navList}>
-        <li className="navItem post">
+        {/* <li className="navItem post">
           <NavLink to="profile/" className={navData => navData.isActive ? cl.activeLink : cl.a}>
             Profile
           </NavLink>
@@ -29,7 +32,8 @@ const Navbar = () => {
           <NavLink to="/Settings" className={navData => navData.isActive ? cl.activeLink : cl.a}>
             Settings
           </NavLink>
-        </li>
+        </li> */}
+        {navbarItems}
       </ul>
     </nav>
   );
