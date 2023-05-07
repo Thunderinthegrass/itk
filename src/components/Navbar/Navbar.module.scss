@@ -1,7 +1,7 @@
-.nav{
+.navWrapper{
   background: #7dc3ec;
   grid-area: n;
-  &List{
+  .navList{
     list-style: none;
   }
   .activeLink{
