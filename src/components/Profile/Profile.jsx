@@ -6,7 +6,15 @@ const Profile = (props) => {
   return (
     <div className={cl.content}>
       <ProfileInfo />
-      <MyPosts posts={props.state.posts} addBtn="Добавить пост" removeBtn="Удалить пост" title="Мои посты"/>
+      <MyPosts
+        posts={props.profilePage.posts}
+        addPost={props.addPost}
+        newPostText={props.profilePage.newPostText}
+        addBtn="Добавить пост"
+        removeBtn="Удалить пост"
+        title="Мои посты"
+        updateNewPostText={props.updateNewPostText}
+      />
     </div>
   );
 };

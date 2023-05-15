@@ -9,6 +9,7 @@ import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 import Practice from './components/Practice/Practice';
 import Friends from './components/Friends/Friends';
+import Grups from './components/Grups/Grups';
 
 const App = (props) => {
   return (
@@ -17,13 +18,14 @@ const App = (props) => {
         <Header />
         <Navbar state={props.state.navbar} friends={props.state.friendsPage}/>
         <Routes>
-          <Route path ="profile/" element={<Profile state={props.state.profilePage}/>} />
-          <Route path ="dialogs/*" element={<Dialogs state={props.state.dialogsPage} />} />
+          <Route path ="profile/" element={<Profile profilePage={props.state.profilePage} addPost={props.addPost} updateNewPostText={props.updateNewPostText} />} />
+          <Route path ="dialogs/*" element={<Dialogs state={props.state.dialogsPage} addMessage={props.addMessage} updateMessageText={props.updateMessageText} />} />
           <Route path ="news/" element={<News state={props.state.newsPage} />} />
-          <Route path ="music/" element={<Music />} />
+          <Route path ="music/" element={<Music state={props.state.musicPage} />} />
           <Route path ="settings/" element={<Settings state={props.state.settingsPage} />} />
           <Route path="practice/"element={<Practice state={props.state.practicePage} />}/>
-          <Route path="friends" element={<Friends state={props.state.friendsPage}/>}/>
+          <Route path="/friends" element={<Friends state={props.state.friendsPage}/>}/>
+          <Route path="/grups" element={<Grups state={props.state.grupsPage}/>}/>
         </Routes>
       </div>
     </BrowserRouter>
